@@ -1,0 +1,52 @@
+name: Pokemon Store Restock Check
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: pokemon-restock-check
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browser
+        run: playwright install --with-deps chromium
+
+      - name: Run stock check
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python check_pokemonstore.py
+
+      - name: Commit updated state file
+        run: |
+          git config user.name "restock-bot"
+          git config user.email "actions@github.com"
+          git add state_pokemonstore.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "update stock state"
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin main && git push && break
+              echo "push 실패, 재시도 ($i)..."
+              sleep 5
+            done
+          else
+            echo "상태 변화 없음, 커밋 생략"
+          fi
