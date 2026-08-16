@@ -49,4 +49,9 @@ jobs:
             git commit -m "update stock state"
             for i in 1 2 3 4 5; do
               git pull --rebase origin main && git push && break
-              ech
+              echo "push 실패, 5초 후 재시도..."
+              sleep 5
+            done
+          else
+            echo "변경사항 없음, 커밋 생략"
+          fi
