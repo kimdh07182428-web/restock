@@ -35,23 +35,18 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python check_pokemonstore.py
 
-      - name: Run naver brand store check (diagnostic)
+      - name: Run naver brand store check
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python check_naverstore.py
 
-      - name: Commit updated state file
+      - name: Commit updated state files
         run: |
           git config user.name "restock-bot"
           git config user.email "actions@github.com"
-          git add state_pokemonstore.json 2>/dev/null || true
+          git add state_pokemonstore.json state_naverstore.json 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "update stock state"
             for i in 1 2 3 4 5; do
               git pull --rebase origin main && git push && break
-              echo "push 실패, 재시도 ($i)..."
-              sleep 5
-            done
-          else
-            echo "상태 변화 없음, 커밋 생략"
-          fi
+              ech
