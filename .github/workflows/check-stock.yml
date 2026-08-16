@@ -1,5 +1,5 @@
 name: Pokemon Store Restock Check
-#해보자
+
 on:
   schedule:
     - cron: "*/5 * * * *"
@@ -30,10 +30,15 @@ jobs:
       - name: Install Playwright browser
         run: playwright install --with-deps chromium
 
-      - name: Run stock check
+      - name: Run pokemonstore.co.kr check
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python check_pokemonstore.py
+
+      - name: Run naver brand store check (diagnostic)
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python check_naverstore.py
 
       - name: Commit updated state file
         run: |
