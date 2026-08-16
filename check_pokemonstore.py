@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-포켓몬 스토어(pokemonstore.co.kr) 재입고 감지 스크립트 - 최종본
+포켓몬 스토어(pokemonstore.co.kr) 재입고 감지 스크립트 - 최종본 v3
+'더보기' 버튼을 더 이상 없을 때까지 자동 클릭해서 카테고리 내 전체 상품을 수집.
 GitHub Actions에서 5분마다 실행 -> 재입고 감지되면 ntfy.sh로 폰에 푸시 알림.
 """
 
@@ -22,7 +23,7 @@ NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 
 def fetch_rendered_html(url: str) -> str:
-    """Playwright로 실제 브라우저처럼 페이지를 열고, 상품 개수가 더 안 늘어날 때까지 계속 스크롤."""
+    """Playwright로 페이지를 열고, '더보기' 버튼을 더 이상 없을 때까지 계속 클릭해서 전체 로딩."""
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(
@@ -35,22 +36,23 @@ def fetch_rendered_html(url: str) -> str:
         page.goto(url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2000)
 
-        # 상품 개수가 더 이상 늘어나지 않을 때까지 스크롤 (최대 40번, 안전장치)
-        prev_count = -1
-        stable_rounds = 0
-        for _ in range(40):
-            count = page.eval_on_selector_all("a.thumb-item", "els => els.length")
-            if count == prev_count:
-                stable_rounds += 1
-                if stable_rounds >= 3:  # 3번 연속 안 늘어나면 다 로딩된 걸로 판단
+        click_count = 0
+        for _ in range(50):  # 안전장치: 최대 50번 클릭
+            more_button = page.locator("text=더보기").first
+            try:
+                if more_button.count() == 0 or not more_button.is_visible():
                     break
-            else:
-                stable_rounds = 0
-            prev_count = count
+                before = page.eval_on_selector_all("a.thumb-item", "els => els.length")
+                more_button.click()
+                click_count += 1
+                page.wait_for_timeout(1500)
+                after = page.eval_on_selector_all("a.thumb-item", "els => els.length")
+                if after == before:
+                    break  # 클릭했는데 개수가 그대로면 더 로딩할 게 없는 것
+            except Exception:
+                break
 
-            page.mouse.wheel(0, 4000)
-            page.wait_for_timeout(1000)
-
+        print(f"[정보] '더보기' 버튼 클릭 횟수: {click_count}")
         html = page.content()
         browser.close()
         return html
@@ -130,13 +132,6 @@ def main():
     current = parse_products(html)
     if not current:
         print("상품을 하나도 못 찾았습니다. 사이트 구조가 바뀌었거나 일시적으로 차단됐을 수 있습니다.")
-        soup = BeautifulSoup(html, "lxml")
-        body_text = soup.get_text(" ", strip=True)
-        print(f"[디버그] 페이지 title: {soup.title.string if soup.title else '(없음)'}")
-        print(f"[디버그] 렌더링된 본문 글자 수: {len(body_text)}")
-        print(f"[디버그] 본문 앞부분 300자: {body_text[:300]}")
-        thumb_count = len(soup.select("a.thumb-item"))
-        print(f"[디버그] a.thumb-item 개수: {thumb_count}")
         return
 
     prev = load_prev_state()
