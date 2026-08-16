@@ -39,6 +39,11 @@
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/7901045495"
   },
+  "11065721680": {
+    "name": "포켓몬 카드 게임 카드 실드 「알로라 나시와 동료들」",
+    "soldout": false,
+    "url": "https://m.brand.naver.com/pokemon/products/11065721680"
+  },
   "8601053662": {
     "name": "포켓몬 카드 게임 카드 실드 「마스카나&라우드본&웨이니발」",
     "soldout": false,
@@ -193,10 +198,5 @@
     "name": "포켓몬 카드 게임 아크릴 카드 스탠드 「쥬피썬더」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/11640338803"
-  },
-  "11640336533": {
-    "name": "포켓몬 카드 게임 아크릴 카드 스탠드 「부스터」",
-    "soldout": true,
-    "url": "https://m.brand.naver.com/pokemon/products/11640336533"
   }
 }
