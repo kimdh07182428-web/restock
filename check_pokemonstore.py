@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-포켓몬 스토어(pokemonstore.co.kr) 재입고 감지 스크립트 - 최종본 v3
+포켓몬 스토어(pokemonstore.co.kr) 재입고 감지 스크립트 - 최종본 v4
 '더보기' 버튼을 더 이상 없을 때까지 자동 클릭해서 카테고리 내 전체 상품을 수집.
 GitHub Actions에서 5분마다 실행 -> 재입고 감지되면 ntfy.sh로 폰에 푸시 알림.
 """
@@ -37,22 +37,40 @@ def fetch_rendered_html(url: str) -> str:
         page.wait_for_timeout(2000)
 
         click_count = 0
+        stable_rounds = 0
         for _ in range(50):  # 안전장치: 최대 50번 클릭
             more_button = page.locator("text=더보기").first
             try:
-                if more_button.count() == 0 or not more_button.is_visible():
+                if more_button.count() == 0:
                     break
+                more_button.scroll_into_view_if_needed(timeout=5000)
+                if not more_button.is_visible():
+                    break
+
                 before = page.eval_on_selector_all("a.thumb-item", "els => els.length")
                 more_button.click()
                 click_count += 1
-                page.wait_for_timeout(1500)
-                after = page.eval_on_selector_all("a.thumb-item", "els => els.length")
+
+                # 새 상품이 로딩될 때까지 최대 8초 대기 (0.5초씩 체크)
+                after = before
+                for _ in range(16):
+                    page.wait_for_timeout(500)
+                    after = page.eval_on_selector_all("a.thumb-item", "els => els.length")
+                    if after > before:
+                        break
+
                 if after == before:
-                    break  # 클릭했는데 개수가 그대로면 더 로딩할 게 없는 것
+                    stable_rounds += 1
+                    if stable_rounds >= 2:  # 연속 2번 변화 없으면 진짜 끝난 것으로 판단
+                        break
+                else:
+                    stable_rounds = 0
             except Exception:
                 break
 
         print(f"[정보] '더보기' 버튼 클릭 횟수: {click_count}")
+        total = page.eval_on_selector_all("a.thumb-item", "els => els.length")
+        print(f"[정보] 최종 로딩된 상품 카드 수: {total}")
         html = page.content()
         browser.close()
         return html
