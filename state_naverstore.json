@@ -54,16 +54,6 @@
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/8201570827"
   },
-  "8201555791": {
-    "name": "포켓몬 카드 게임 카드 실드 「나오하&뜨아거&꾸왁스」",
-    "soldout": false,
-    "url": "https://m.brand.naver.com/pokemon/products/8201555791"
-  },
-  "8201540128": {
-    "name": "포켓몬 카드 게임 카드 실드 「코라이돈」",
-    "soldout": false,
-    "url": "https://m.brand.naver.com/pokemon/products/8201540128"
-  },
   "13106045292": {
     "name": "포켓몬 카드 게임 MEGA 스타트 덱 100 배틀컬렉션",
     "soldout": true,
@@ -198,5 +188,15 @@
     "name": "포켓몬 카드 게임 아크릴 카드 스탠드 「쥬피썬더」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/11640338803"
+  },
+  "11640336533": {
+    "name": "포켓몬 카드 게임 아크릴 카드 스탠드 「부스터」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/11640336533"
+  },
+  "11640334194": {
+    "name": "포켓몬 카드 게임 아크릴 카드 스탠드 「에브이」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/11640334194"
   }
 }
