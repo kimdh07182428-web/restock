@@ -24,11 +24,6 @@
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/8601058886"
   },
-  "7901050725": {
-    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「찬란한 무한다이노」",
-    "soldout": false,
-    "url": "https://m.brand.naver.com/pokemon/products/7901050725"
-  },
   "7901045495": {
     "name": "포켓몬 카드 게임 카드 실드「앤테이&라이코&스이쿤」",
     "soldout": false,
@@ -39,10 +34,10 @@
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/11065721680"
   },
-  "8601053662": {
-    "name": "포켓몬 카드 게임 카드 실드 「마스카나&라우드본&웨이니발」",
+  "7901050725": {
+    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「찬란한 무한다이노」",
     "soldout": false,
-    "url": "https://m.brand.naver.com/pokemon/products/8601053662"
+    "url": "https://m.brand.naver.com/pokemon/products/7901050725"
   },
   "13106045292": {
     "name": "포켓몬 카드 게임 MEGA 스타트 덱 100 배틀컬렉션",
@@ -198,5 +193,10 @@
     "name": "포켓몬 카드 게임 아크릴 카드 스탠드 「리피아」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/11640329552"
+  },
+  "11640327249": {
+    "name": "포켓몬 카드 게임 아크릴 카드 스탠드 「글레이시아」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/11640327249"
   }
 }
