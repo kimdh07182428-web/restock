@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-네이버 브랜드스토어(포켓몬) 재입고 감지 스크립트 - 최종본
+네이버 브랜드스토어(포켓몬) 재입고 감지 스크립트 - 최종본 v3
 GitHub Actions에서 5분마다 실행 -> 재입고 감지되면 ntfy.sh로 폰에 푸시 알림.
 """
 
@@ -42,21 +42,32 @@ def fetch_rendered_html(url: str) -> str:
         page.goto(url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2000)
 
-        # 상품 개수가 더 이상 안 늘어날 때까지 스크롤 (최대 40번)
+        # 상품 개수가 더 이상 안 늘어날 때까지 스크롤 (최대 100번, 연속 7번 변화 없으면 종료)
         prev_count = -1
         stable_rounds = 0
-        for _ in range(40):
+        scroll_count = 0
+        for _ in range(100):
+            page.mouse.wheel(0, 3000)
+            scroll_count += 1
+
+            # 새 상품 로딩될 때까지 최대 4초 대기 (0.5초씩 체크)
             count = page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length")
+            for _ in range(8):
+                page.wait_for_timeout(500)
+                count = page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length")
+                if count > prev_count:
+                    break
+
             if count == prev_count:
                 stable_rounds += 1
-                if stable_rounds >= 3:
+                if stable_rounds >= 7:  # 연속 7번 변화 없으면 진짜 끝난 것으로 판단
                     break
             else:
                 stable_rounds = 0
             prev_count = count
-            page.mouse.wheel(0, 3000)
-            page.wait_for_timeout(1000)
 
+        print(f"[정보] 스크롤 횟수: {scroll_count}")
+        print(f"[정보] 최종 로딩된 상품 카드 수: {prev_count}")
         html = page.content()
         browser.close()
         return html
