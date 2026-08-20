@@ -9,11 +9,6 @@
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/8601056788"
   },
-  "8601058886": {
-    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「테라스탈 윈디」",
-    "soldout": false,
-    "url": "https://m.brand.naver.com/pokemon/products/8601058886"
-  },
   "7901050725": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「찬란한 무한다이노」",
     "soldout": false,
@@ -28,6 +23,11 @@
     "name": "포켓몬 카드 게임 카드 실드 「한판내기」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/9882789119"
+  },
+  "8601058886": {
+    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「테라스탈 윈디」",
+    "soldout": false,
+    "url": "https://m.brand.naver.com/pokemon/products/8601058886"
   },
   "8201570827": {
     "name": "포켓몬 카드 게임 카드 실드 「진화의 궤적 가디안」",
