@@ -9,25 +9,15 @@
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/8601056788"
   },
-  "7901050725": {
-    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「찬란한 무한다이노」",
-    "soldout": false,
-    "url": "https://m.brand.naver.com/pokemon/products/7901050725"
-  },
   "8601058886": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「테라스탈 윈디」",
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/8601058886"
   },
-  "7901045495": {
-    "name": "포켓몬 카드 게임 카드 실드「앤테이&라이코&스이쿤」",
+  "7901050725": {
+    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「찬란한 무한다이노」",
     "soldout": false,
-    "url": "https://m.brand.naver.com/pokemon/products/7901045495"
-  },
-  "11065721680": {
-    "name": "포켓몬 카드 게임 카드 실드 「알로라 나시와 동료들」",
-    "soldout": true,
-    "url": "https://m.brand.naver.com/pokemon/products/11065721680"
+    "url": "https://m.brand.naver.com/pokemon/products/7901050725"
   },
   "10477117131": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「테라스탈 오거폰 벽록의 가면」",
@@ -53,6 +43,16 @@
     "name": "포켓몬 카드 게임 카드 실드 「코라이돈」",
     "soldout": false,
     "url": "https://m.brand.naver.com/pokemon/products/8201540128"
+  },
+  "8157096081": {
+    "name": "포켓몬 카드 게임 스칼렛&바이올렛 스타터 세트 ex 「나오하&루카리오 ex」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/8157096081"
+  },
+  "7901045495": {
+    "name": "포켓몬 카드 게임 카드 실드「앤테이&라이코&스이쿤」",
+    "soldout": false,
+    "url": "https://m.brand.naver.com/pokemon/products/7901045495"
   },
   "13106045292": {
     "name": "포켓몬 카드 게임 MEGA 스타트 덱 100 배틀컬렉션",
