@@ -44,11 +44,6 @@
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/8201555791"
   },
-  "8201547275": {
-    "name": "@포켓몬 카드 게임 카드 실드 「미라이돈」",
-    "soldout": true,
-    "url": "https://m.brand.naver.com/pokemon/products/8201547275"
-  },
   "8201540128": {
     "name": "@포켓몬 카드 게임 카드 실드 「코라이돈」",
     "soldout": true,
@@ -583,6 +578,11 @@
     "name": "@포켓몬 카드 게임 카드 실드 「맛보돈」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/8201564769"
+  },
+  "8201547275": {
+    "name": "@포켓몬 카드 게임 카드 실드 「미라이돈」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/8201547275"
   },
   "8157103627": {
     "name": "@포켓몬 카드 게임 스칼렛&바이올렛 스타터 세트 ex 「꾸왁스&따라큐 ex」",
