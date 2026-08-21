@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v7
+네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v8 (진단용)
 GitHub Actions에서 5분마다 실행 -> 재입고 감지되면 ntfy.sh로 폰에 푸시 알림.
 """
 
@@ -22,13 +22,7 @@ NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "CHANGE_ME_TO_RANDOM_TOPIC")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 BLOCK_INDICATORS = ["에러페이지", "접속이 불가", "일시적으로 제한"]
-
-STEALTH_SCRIPT = """
-Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-window.chrome = { runtime: {} };
-Object.defineProperty(navigator, 'languages', { get: () => ['ko-KR', 'ko'] });
-Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5] });
-"""
+INTERSTITIAL_HINTS = ["앱으로 보기", "네이버 앱에서 보기", "app-banner", "app_banner"]
 
 
 def fetch_rendered_html(url: str) -> str:
@@ -38,47 +32,85 @@ def fetch_rendered_html(url: str) -> str:
         )
         context = browser.new_context(
             user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+                "Mozilla/5.0 (Linux; Android 13; Mobile) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/124.0 Mobile Safari/537.36"
             ),
-            viewport={"width": 1280, "height": 900},
+            viewport={"width": 390, "height": 844},
             locale="ko-KR",
+            is_mobile=True,
+            has_touch=True,
         )
-        context.add_init_script(STEALTH_SCRIPT)
+        context.add_init_script(
+            "Object.defineProperty(navigator, 'webdriver', { get: () => undefined });"
+        )
         context.set_extra_http_headers({
             "Accept-Language": "ko-KR,ko;q=0.9",
-            "Referer": "https://www.naver.com/",
+            "Referer": "https://m.naver.com/",
         })
         page = context.new_page()
         page.goto(url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2000)
 
-        prev_count = -1
+        # 앱 유도 배너/인터스티셜이 있으면 텍스트로 감지해서 로그 남김
+        first_html = page.content()
+        for hint in INTERSTITIAL_HINTS:
+            if hint in first_html:
+                print(f"[진단] 앱 유도 배너 의심 텍스트 발견: '{hint}'")
+
+        # 초기 상품 카드 수 (선택자별로 체크)
+        count_hz4 = page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length")
+        count_any_product_link = page.eval_on_selector_all("a[href*='/products/']", "els => els.length")
+        print(f"[진단] 초기 li.Hz4XxKbt9h 개수: {count_hz4}")
+        print(f"[진단] 초기 a[href*='/products/'] 개수: {count_any_product_link}")
+
+        # 실제 터치 스와이프 제스처로 스크롤 (synthetic scrollTo 대신)
+        prev_count = count_hz4 if count_hz4 > 0 else count_any_product_link
         stable_rounds = 0
         scroll_count = 0
         for _ in range(100):
-            page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            try:
+                page.touchscreen.tap(195, 700)
+            except Exception:
+                pass
+            page.mouse.move(195, 700)
+            page.mouse.wheel(0, 2500)
             scroll_count += 1
 
-            # 새 상품 로딩될 때까지 최대 12초 대기 (1초씩 체크)
-            count = page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length")
-            for _ in range(12):
+            count = max(
+                page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length"),
+                page.eval_on_selector_all("a[href*='/products/']", "els => els.length"),
+            )
+            for _ in range(10):
                 page.wait_for_timeout(1000)
-                count = page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length")
+                count = max(
+                    page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length"),
+                    page.eval_on_selector_all("a[href*='/products/']", "els => els.length"),
+                )
                 if count > prev_count:
                     break
 
             if count == prev_count:
                 stable_rounds += 1
-                if stable_rounds >= 5:  # 연속 5번(각각 최대 12초 대기 포함) 변화 없으면 종료
+                if stable_rounds >= 5:
                     break
             else:
                 stable_rounds = 0
             prev_count = count
 
         print(f"[정보] 스크롤 횟수: {scroll_count}")
-        print(f"[정보] 최종 로딩된 상품 카드 수: {prev_count}")
+        print(f"[정보] 최종 li.Hz4XxKbt9h 개수: {page.eval_on_selector_all('li.Hz4XxKbt9h', 'els => els.length')}")
+        print(f"[정보] 최종 a[href*='/products/'] 개수: {page.eval_on_selector_all(chr(39)+'a[href*=\"/products/\"]'+chr(39), 'els => els.length') if False else page.eval_on_selector_all('a[href*=\"/products/\"]', 'els => els.length')}")
+
         html = page.content()
+
+        # 진단: li.Hz4XxKbt9h가 0인데 상품 링크는 있는 경우, 실제 부모 태그/클래스 샘플 출력
+        if page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length") == 0 and count_any_product_link > 0:
+            sample = page.eval_on_selector(
+                "a[href*='/products/']",
+                "el => { let p = el; for (let i=0;i<4 && p;i++){p=p.parentElement;} return p ? p.outerHTML.slice(0,300) : 'NONE'; }"
+            )
+            print(f"[진단] 상품 링크의 상위 4단계 부모 HTML 샘플:\n{sample}")
+
         browser.close()
         return html
 
