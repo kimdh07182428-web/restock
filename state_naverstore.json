@@ -1,9 +1,4 @@
 {
-  "8157100461": {
-    "name": "@포켓몬 카드 게임 스칼렛&바이올렛 스타터 세트 ex 「뜨아거&전룡 ex」",
-    "soldout": true,
-    "url": "https://m.brand.naver.com/pokemon/products/8157100461"
-  },
   "7901050725": {
     "name": "@포켓몬 카드 게임 카드 실드 프리미엄 「찬란한 무한다이노」",
     "soldout": true,
@@ -33,6 +28,11 @@
     "name": "@포켓몬 카드 게임 카드 실드 「코라이돈」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/8201540128"
+  },
+  "8157100461": {
+    "name": "@포켓몬 카드 게임 스칼렛&바이올렛 스타터 세트 ex 「뜨아거&전룡 ex」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/8157100461"
   },
   "7901045495": {
     "name": "@포켓몬 카드 게임 카드 실드「앤테이&라이코&스이쿤」",
