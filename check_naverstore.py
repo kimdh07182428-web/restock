@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v8 (진단용, 문법 오류 수정)
+네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v9
+해시 클래스명 의존 제거, href 패턴 기반 파싱으로 변경.
 GitHub Actions에서 5분마다 실행 -> 재입고 감지되면 ntfy.sh로 폰에 푸시 알림.
 """
 
@@ -22,12 +23,11 @@ NTFY_TOPIC = os.environ.get("NTFY_TOPIC", "CHANGE_ME_TO_RANDOM_TOPIC")
 NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 BLOCK_INDICATORS = ["에러페이지", "접속이 불가", "일시적으로 제한"]
-INTERSTITIAL_HINTS = ["앱으로 보기", "네이버 앱에서 보기", "app-banner", "app_banner"]
 PRODUCT_LINK_SELECTOR = "a[href*='/products/']"
 
 
-def count_elements(page, selector: str) -> int:
-    return page.eval_on_selector_all(selector, "els => els.length")
+def count_links(page) -> int:
+    return page.eval_on_selector_all(PRODUCT_LINK_SELECTOR, "els => els.length")
 
 
 def fetch_rendered_html(url: str) -> str:
@@ -56,33 +56,22 @@ def fetch_rendered_html(url: str) -> str:
         page.goto(url, wait_until="networkidle", timeout=30000)
         page.wait_for_timeout(2000)
 
-        # 앱 유도 배너/인터스티셜이 있으면 텍스트로 감지해서 로그 남김
-        first_html = page.content()
-        for hint in INTERSTITIAL_HINTS:
-            if hint in first_html:
-                print(f"[진단] 앱 유도 배너 의심 텍스트 발견: '{hint}'")
+        initial_count = count_links(page)
+        print(f"[진단] 초기 a[href*='/products/'] 개수: {initial_count}")
 
-        count_hz4 = count_elements(page, "li.Hz4XxKbt9h")
-        count_links = count_elements(page, PRODUCT_LINK_SELECTOR)
-        print(f"[진단] 초기 li.Hz4XxKbt9h 개수: {count_hz4}")
-        print(f"[진단] 초기 a[href*='/products/'] 개수: {count_links}")
-
-        prev_count = max(count_hz4, count_links)
+        prev_count = initial_count
         stable_rounds = 0
         scroll_count = 0
         for _ in range(100):
-            try:
-                page.touchscreen.tap(195, 700)
-            except Exception:
-                pass
-            page.mouse.move(195, 700)
+            # 카드가 아닌 빈 공간(화면 상단 근처)으로 커서를 옮긴 뒤 스크롤 -> 실수 클릭 방지
+            page.mouse.move(195, 60)
             page.mouse.wheel(0, 2500)
             scroll_count += 1
 
-            count = max(count_elements(page, "li.Hz4XxKbt9h"), count_elements(page, PRODUCT_LINK_SELECTOR))
+            count = count_links(page)
             for _ in range(10):
                 page.wait_for_timeout(1000)
-                count = max(count_elements(page, "li.Hz4XxKbt9h"), count_elements(page, PRODUCT_LINK_SELECTOR))
+                count = count_links(page)
                 if count > prev_count:
                     break
 
@@ -94,21 +83,14 @@ def fetch_rendered_html(url: str) -> str:
                 stable_rounds = 0
             prev_count = count
 
-        final_hz4 = count_elements(page, "li.Hz4XxKbt9h")
-        final_links = count_elements(page, PRODUCT_LINK_SELECTOR)
+        final_count = count_links(page)
         print(f"[정보] 스크롤 횟수: {scroll_count}")
-        print(f"[정보] 최종 li.Hz4XxKbt9h 개수: {final_hz4}")
-        print(f"[정보] 최종 a[href*='/products/'] 개수: {final_links}")
+        print(f"[정보] 최종 a[href*='/products/'] 개수: {final_count}")
+
+        if final_count < initial_count:
+            print("[경고] 최종 개수가 초기 개수보다 적음 -> 페이지 이동/초기화 의심")
 
         html = page.content()
-
-        if final_hz4 == 0 and final_links > 0:
-            sample = page.eval_on_selector(
-                PRODUCT_LINK_SELECTOR,
-                "el => { let p = el; for (let i=0;i<4 && p;i++){p=p.parentElement;} return p ? p.outerHTML.slice(0,300) : 'NONE'; }"
-            )
-            print(f"[진단] 상품 링크의 상위 4단계 부모 HTML 샘플:\n{sample}")
-
         browser.close()
         return html
 
@@ -118,24 +100,45 @@ def is_blocked(html: str) -> bool:
 
 
 def parse_products(html: str) -> dict:
+    """href의 productNo를 기준으로 상품을 찾음 (해시 클래스명에 의존하지 않음)."""
     soup = BeautifulSoup(html, "lxml")
-    cards = soup.select("li.Hz4XxKbt9h")
+    links = soup.select(PRODUCT_LINK_SELECTOR)
 
     result = {}
-    for card in cards:
-        link = card.select_one("a[href*='/products/']")
-        if not link:
-            continue
+    for link in links:
         href = link.get("href", "")
         m = re.search(r"/products/(\d+)", href)
         if not m:
             continue
         product_no = m.group(1)
+        if product_no in result:
+            continue
 
-        name_tag = card.select_one("strong.xSW7C99vO3")
-        name = name_tag.get_text(strip=True) if name_tag else f"상품 {product_no}"
+        # 이름: 링크 내부 이미지의 alt 속성 우선, 없으면 상위 요소의 텍스트 사용
+        name = None
+        img = link.select_one("img[alt]")
+        if img and img.get("alt"):
+            name = img.get("alt").strip()
 
-        is_soldout = card.find(string=re.compile("품절")) is not None
+        # 품절 여부 판단 및 이름 보완을 위해 상위 요소로 몇 단계 올라감
+        card = link
+        for _ in range(5):
+            if card.parent is None:
+                break
+            card = card.parent
+
+        if not name:
+            text_candidates = card.find_all(string=True)
+            for t in text_candidates:
+                t_clean = t.strip()
+                if t_clean and "품절" not in t_clean and len(t_clean) > 1:
+                    name = t_clean
+                    break
+            if not name:
+                name = f"상품 {product_no}"
+
+        card_text = card.get_text(" ", strip=True)
+        is_soldout = "품절" in card_text
 
         full_url = BASE_URL + href if href.startswith("/") else href
 
