@@ -34,16 +34,6 @@
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/8601056788"
   },
-  "8201570827": {
-    "name": "@포켓몬 카드 게임 카드 실드 「진화의 궤적 가디안」",
-    "soldout": true,
-    "url": "https://m.brand.naver.com/pokemon/products/8201570827"
-  },
-  "8201555791": {
-    "name": "@포켓몬 카드 게임 카드 실드 「나오하&뜨아거&꾸왁스」",
-    "soldout": true,
-    "url": "https://m.brand.naver.com/pokemon/products/8201555791"
-  },
   "8201540128": {
     "name": "@포켓몬 카드 게임 카드 실드 「코라이돈」",
     "soldout": true,
@@ -135,7 +125,7 @@
     "url": "https://m.brand.naver.com/pokemon/products/12187005700"
   },
   "12186998990": {
-    "name": "0번 썸네일",
+    "name": "@포켓몬 카드 게임 컬렉션 파일 프리미엄 「제크로무・레시라무」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/12186998990"
   },
@@ -574,10 +564,20 @@
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/8201580215"
   },
+  "8201570827": {
+    "name": "@포켓몬 카드 게임 카드 실드 「진화의 궤적 가디안」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/8201570827"
+  },
   "8201564769": {
     "name": "@포켓몬 카드 게임 카드 실드 「맛보돈」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/8201564769"
+  },
+  "8201555791": {
+    "name": "@포켓몬 카드 게임 카드 실드 「나오하&뜨아거&꾸왁스」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/8201555791"
   },
   "8201547275": {
     "name": "@포켓몬 카드 게임 카드 실드 「미라이돈」",
