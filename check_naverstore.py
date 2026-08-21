@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v9
-해시 클래스명 의존 제거, href 패턴 기반 파싱으로 변경.
+네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v10 (속도 개선)
 GitHub Actions에서 5분마다 실행 -> 재입고 감지되면 ntfy.sh로 폰에 푸시 알림.
 """
 
@@ -54,7 +53,7 @@ def fetch_rendered_html(url: str) -> str:
         })
         page = context.new_page()
         page.goto(url, wait_until="networkidle", timeout=30000)
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(1500)
 
         initial_count = count_links(page)
         print(f"[진단] 초기 a[href*='/products/'] 개수: {initial_count}")
@@ -63,21 +62,21 @@ def fetch_rendered_html(url: str) -> str:
         stable_rounds = 0
         scroll_count = 0
         for _ in range(100):
-            # 카드가 아닌 빈 공간(화면 상단 근처)으로 커서를 옮긴 뒤 스크롤 -> 실수 클릭 방지
             page.mouse.move(195, 60)
-            page.mouse.wheel(0, 2500)
+            page.mouse.wheel(0, 4000)
             scroll_count += 1
 
             count = count_links(page)
+            # 최대 3초(0.3초 x 10회)만 대기, 늘어나면 바로 다음 스크롤로
             for _ in range(10):
-                page.wait_for_timeout(1000)
+                page.wait_for_timeout(300)
                 count = count_links(page)
                 if count > prev_count:
                     break
 
             if count == prev_count:
                 stable_rounds += 1
-                if stable_rounds >= 5:
+                if stable_rounds >= 3:  # 연속 3번 변화 없으면 종료
                     break
             else:
                 stable_rounds = 0
@@ -114,13 +113,11 @@ def parse_products(html: str) -> dict:
         if product_no in result:
             continue
 
-        # 이름: 링크 내부 이미지의 alt 속성 우선, 없으면 상위 요소의 텍스트 사용
         name = None
         img = link.select_one("img[alt]")
         if img and img.get("alt"):
             name = img.get("alt").strip()
 
-        # 품절 여부 판단 및 이름 보완을 위해 상위 요소로 몇 단계 올라감
         card = link
         for _ in range(5):
             if card.parent is None:
