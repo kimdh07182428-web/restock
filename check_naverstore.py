@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v8 (진단용)
+네이버 브랜드스토어(포켓몬) 카드게임 카테고리 재입고 감지 스크립트 - v8 (진단용, 문법 오류 수정)
 GitHub Actions에서 5분마다 실행 -> 재입고 감지되면 ntfy.sh로 폰에 푸시 알림.
 """
 
@@ -23,6 +23,11 @@ NTFY_URL = f"https://ntfy.sh/{NTFY_TOPIC}"
 
 BLOCK_INDICATORS = ["에러페이지", "접속이 불가", "일시적으로 제한"]
 INTERSTITIAL_HINTS = ["앱으로 보기", "네이버 앱에서 보기", "app-banner", "app_banner"]
+PRODUCT_LINK_SELECTOR = "a[href*='/products/']"
+
+
+def count_elements(page, selector: str) -> int:
+    return page.eval_on_selector_all(selector, "els => els.length")
 
 
 def fetch_rendered_html(url: str) -> str:
@@ -57,14 +62,12 @@ def fetch_rendered_html(url: str) -> str:
             if hint in first_html:
                 print(f"[진단] 앱 유도 배너 의심 텍스트 발견: '{hint}'")
 
-        # 초기 상품 카드 수 (선택자별로 체크)
-        count_hz4 = page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length")
-        count_any_product_link = page.eval_on_selector_all("a[href*='/products/']", "els => els.length")
+        count_hz4 = count_elements(page, "li.Hz4XxKbt9h")
+        count_links = count_elements(page, PRODUCT_LINK_SELECTOR)
         print(f"[진단] 초기 li.Hz4XxKbt9h 개수: {count_hz4}")
-        print(f"[진단] 초기 a[href*='/products/'] 개수: {count_any_product_link}")
+        print(f"[진단] 초기 a[href*='/products/'] 개수: {count_links}")
 
-        # 실제 터치 스와이프 제스처로 스크롤 (synthetic scrollTo 대신)
-        prev_count = count_hz4 if count_hz4 > 0 else count_any_product_link
+        prev_count = max(count_hz4, count_links)
         stable_rounds = 0
         scroll_count = 0
         for _ in range(100):
@@ -76,16 +79,10 @@ def fetch_rendered_html(url: str) -> str:
             page.mouse.wheel(0, 2500)
             scroll_count += 1
 
-            count = max(
-                page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length"),
-                page.eval_on_selector_all("a[href*='/products/']", "els => els.length"),
-            )
+            count = max(count_elements(page, "li.Hz4XxKbt9h"), count_elements(page, PRODUCT_LINK_SELECTOR))
             for _ in range(10):
                 page.wait_for_timeout(1000)
-                count = max(
-                    page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length"),
-                    page.eval_on_selector_all("a[href*='/products/']", "els => els.length"),
-                )
+                count = max(count_elements(page, "li.Hz4XxKbt9h"), count_elements(page, PRODUCT_LINK_SELECTOR))
                 if count > prev_count:
                     break
 
@@ -97,16 +94,17 @@ def fetch_rendered_html(url: str) -> str:
                 stable_rounds = 0
             prev_count = count
 
+        final_hz4 = count_elements(page, "li.Hz4XxKbt9h")
+        final_links = count_elements(page, PRODUCT_LINK_SELECTOR)
         print(f"[정보] 스크롤 횟수: {scroll_count}")
-        print(f"[정보] 최종 li.Hz4XxKbt9h 개수: {page.eval_on_selector_all('li.Hz4XxKbt9h', 'els => els.length')}")
-        print(f"[정보] 최종 a[href*='/products/'] 개수: {page.eval_on_selector_all(chr(39)+'a[href*=\"/products/\"]'+chr(39), 'els => els.length') if False else page.eval_on_selector_all('a[href*=\"/products/\"]', 'els => els.length')}")
+        print(f"[정보] 최종 li.Hz4XxKbt9h 개수: {final_hz4}")
+        print(f"[정보] 최종 a[href*='/products/'] 개수: {final_links}")
 
         html = page.content()
 
-        # 진단: li.Hz4XxKbt9h가 0인데 상품 링크는 있는 경우, 실제 부모 태그/클래스 샘플 출력
-        if page.eval_on_selector_all("li.Hz4XxKbt9h", "els => els.length") == 0 and count_any_product_link > 0:
+        if final_hz4 == 0 and final_links > 0:
             sample = page.eval_on_selector(
-                "a[href*='/products/']",
+                PRODUCT_LINK_SELECTOR,
                 "el => { let p = el; for (let i=0;i<4 && p;i++){p=p.parentElement;} return p ? p.outerHTML.slice(0,300) : 'NONE'; }"
             )
             print(f"[진단] 상품 링크의 상위 4단계 부모 HTML 샘플:\n{sample}")
