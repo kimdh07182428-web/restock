@@ -19,11 +19,6 @@
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/10477117131"
   },
-  "9882789119": {
-    "name": "@포켓몬 카드 게임 카드 실드 「한판내기」",
-    "soldout": true,
-    "url": "https://m.brand.naver.com/pokemon/products/9882789119"
-  },
   "8601058886": {
     "name": "@포켓몬 카드 게임 카드 실드 프리미엄 「테라스탈 윈디」",
     "soldout": true,
@@ -418,6 +413,11 @@
     "name": "@포켓몬 카드 게임 카드 실드 「돌핀맨」",
     "soldout": true,
     "url": "https://m.brand.naver.com/pokemon/products/9882800932"
+  },
+  "9882789119": {
+    "name": "@포켓몬 카드 게임 카드 실드 「한판내기」",
+    "soldout": true,
+    "url": "https://m.brand.naver.com/pokemon/products/9882789119"
   },
   "9882091987": {
     "name": "@포켓몬 카드 게임 스칼렛&바이올렛 하이클래스팩 「샤이니트레저 ex」",
