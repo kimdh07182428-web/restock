@@ -59,11 +59,6 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=128841940"
   },
-  "131608736": {
-    "name": "포켓몬 카드 게임 MEGA 확장팩 「메가브레이브」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=131608736"
-  },
   "136143650": {
     "name": "포켓몬 카드 게임 컬렉션 파일 「모험의 시작 : 피카츄·이상해씨·파이리·꼬부기」",
     "soldout": false,
@@ -78,6 +73,11 @@
     "name": "포켓몬 카드 게임 컬렉션 파일 「디멘션 : 뮤&뮤츠」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136143165"
+  },
+  "131608736": {
+    "name": "포켓몬 카드 게임 MEGA 확장팩 「메가브레이브」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=131608736"
   },
   "136142937": {
     "name": "포켓몬 카드 게임 플레이매트 「디멘션 : 뮤&뮤츠」",
