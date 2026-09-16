@@ -699,6 +699,11 @@
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999205"
   },
+  "136999237": {
+    "name": "포켓몬 카드 게임 카드 실드 「3마리의 모험」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999237"
+  },
   "133226843": {
     "name": "포켓몬 카드 게임 MEGA 스페셜 카드 세트「메가엘레이드 ex」",
     "soldout": true,
@@ -708,11 +713,6 @@
     "name": "포켓몬 카드 게임 덱 케이스 「레시라무」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=131326295"
-  },
-  "136999237": {
-    "name": "포켓몬 카드 게임 카드 실드 「3마리의 모험」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999237"
   },
   "114167141": {
     "name": "포켓몬센터 포켓몬 카드 게임 카드 실드 「Playroom」",
@@ -821,7 +821,7 @@
   },
   "136999539": {
     "name": "포켓몬 카드 게임 플레이매트 「다 함께 축하 파티 Night」",
-    "soldout": false,
+    "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999539"
   },
   "130850088": {
