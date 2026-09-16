@@ -624,6 +624,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166445"
   },
+  "136999185": {
+    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「30th CELEBRATION」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999185"
+  },
   "132207304": {
     "name": "포켓몬 카드 게임 카드 실드 「팽도리&팽태자&엠페르트」",
     "soldout": true,
@@ -673,11 +678,6 @@
     "name": "포켓몬 카드 게임 카드 실드 「성도의 모험 루기아&마기라스」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=124347958"
-  },
-  "136999185": {
-    "name": "포켓몬 카드 게임 카드 실드 프리미엄 「30th CELEBRATION」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999185"
   },
   "122818151": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「큐레무」",
@@ -829,15 +829,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166293"
   },
-  "114166583": {
-    "name": "포켓몬 카드 게임 카드 실드 「기라티나 오리진폼」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166583"
-  },
   "136999205": {
     "name": "포켓몬 카드 게임 카드 실드 「30주년(BLUE)」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999205"
+  },
+  "114166583": {
+    "name": "포켓몬 카드 게임 카드 실드 「기라티나 오리진폼」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166583"
   },
   "114166383": {
     "name": "포켓몬 카드 게임 소드&실드 강화 확장팩 「다크판타스마」",
