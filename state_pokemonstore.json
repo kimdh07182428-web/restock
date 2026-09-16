@@ -459,15 +459,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167719"
   },
-  "131702908": {
-    "name": "포켓몬 카드 게임 카드 실드 「메가가디안」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=131702908"
-  },
   "136999185": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「30th CELEBRATION」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999185"
+  },
+  "131702908": {
+    "name": "포켓몬 카드 게임 카드 실드 「메가가디안」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=131702908"
   },
   "131702849": {
     "name": "포켓몬 카드 게임 카드 실드 「메가루카리오」",
