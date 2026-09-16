@@ -674,6 +674,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=124347958"
   },
+  "136999205": {
+    "name": "포켓몬 카드 게임 카드 실드 「30주년(BLUE)」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999205"
+  },
   "122818151": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「큐레무」",
     "soldout": true,
@@ -684,10 +689,10 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167659"
   },
-  "136999205": {
-    "name": "포켓몬 카드 게임 카드 실드 「30주년(BLUE)」",
+  "136999237": {
+    "name": "포켓몬 카드 게임 카드 실드 「3마리의 모험」",
     "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999205"
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999237"
   },
   "124347973": {
     "name": "포켓몬 카드 게임 카드 실드 「하나의 모험 레시라무&뽀록나」",
@@ -698,11 +703,6 @@
     "name": "포켓몬 카드 게임 소드&실드 확장팩 「소드」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167033"
-  },
-  "136999237": {
-    "name": "포켓몬 카드 게임 카드 실드 「3마리의 모험」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999237"
   },
   "133226843": {
     "name": "포켓몬 카드 게임 MEGA 스페셜 카드 세트「메가엘레이드 ex」",
