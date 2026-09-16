@@ -451,7 +451,7 @@
   },
   "136999185": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「30th CELEBRATION」",
-    "soldout": false,
+    "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999185"
   },
   "114167661": {
@@ -694,6 +694,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167033"
   },
+  "136999205": {
+    "name": "포켓몬 카드 게임 카드 실드 「30주년(BLUE)」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999205"
+  },
   "133226843": {
     "name": "포켓몬 카드 게임 MEGA 스페셜 카드 세트「메가엘레이드 ex」",
     "soldout": true,
@@ -708,11 +713,6 @@
     "name": "포켓몬 카드 게임 카드 실드 「3마리의 모험」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999237"
-  },
-  "136999205": {
-    "name": "포켓몬 카드 게임 카드 실드 「30주년(BLUE)」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=136999205"
   },
   "114167141": {
     "name": "포켓몬센터 포켓몬 카드 게임 카드 실드 「Playroom」",
