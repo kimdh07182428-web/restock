@@ -514,6 +514,16 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114772895"
   },
+  "137272340": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「나오하&마스카나 ex」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272340"
+  },
+  "137272360": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「조로아&조로아크 ex」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272360"
+  },
   "114166455": {
     "name": "포켓몬 카드 게임 플레이매트 「거북왕」",
     "soldout": true,
@@ -1009,6 +1019,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114165383"
   },
+  "137272635": {
+    "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272635"
+  },
   "137272611": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 나오하&마스카나」",
     "soldout": false,
@@ -1018,11 +1033,6 @@
     "name": "포켓몬 카드 게임 소드&실드 확장팩 「백은의 랜스」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167037"
-  },
-  "137272635": {
-    "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272635"
   },
   "132207346": {
     "name": "포켓몬 카드 게임 카드 실드 「토게데마루&멍파치」",
