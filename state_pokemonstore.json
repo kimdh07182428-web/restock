@@ -439,10 +439,25 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167561"
   },
+  "137272340": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「나오하&마스카나 ex」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272340"
+  },
+  "137272307": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「이브이 ex」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272307"
+  },
   "114169391": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 60장 랜덤 ex 스타트 덱",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114169391"
+  },
+  "137272360": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「조로아&조로아크 ex」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272360"
   },
   "114166453": {
     "name": "포켓몬 카드 게임 플레이매트 「리자몽」",
@@ -824,6 +839,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166295"
   },
+  "137272606": {
+    "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
+  },
   "130850088": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「진화의 궤적 크로뱃」",
     "soldout": true,
@@ -908,6 +928,11 @@
     "name": "포켓몬 카드 게임 소드&실드 확장팩 「로스트어비스」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166533"
+  },
+  "137272611": {
+    "name": "포켓몬 카드 게임 카드 실드  「잘 자 나오하&마스카나」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272611"
   },
   "114167721": {
     "name": "포켓몬 카드 게임 카드 실드 「맛보돈」",
