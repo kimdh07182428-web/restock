@@ -174,20 +174,20 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167725"
   },
-  "137272307": {
-    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「이브이 ex」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272307"
-  },
   "137272360": {
     "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「조로아&조로아크 ex」",
-    "soldout": false,
+    "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272360"
   },
   "137272340": {
     "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「나오하&마스카나 ex」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272340"
+  },
+  "137272307": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「이브이 ex」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272307"
   },
   "114169383": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「흑염의 지배자」",
@@ -309,6 +309,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=123970792"
   },
+  "137272606": {
+    "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
+  },
   "114166417": {
     "name": "포켓몬 카드 게임 카드 실드 「테오키스」",
     "soldout": true,
@@ -319,20 +324,10 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166361"
   },
-  "137272606": {
-    "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
-  },
   "114167755": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「바이올렛 ex」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167755"
-  },
-  "137272606": {
-    "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
   },
   "136572687": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「메가레쿠쟈」",
@@ -534,15 +529,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166455"
   },
-  "120889360": {
-    "name": "포켓몬 카드 게임 스칼렛&바이올렛 스페셜 점보 카드 세트 「오거폰」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=120889360"
-  },
   "137272635": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272635"
+  },
+  "120889360": {
+    "name": "포켓몬 카드 게임 스칼렛&바이올렛 스페셜 점보 카드 세트 「오거폰」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=120889360"
   },
   "133683413": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄「보르쥐」",
@@ -659,6 +654,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166163"
   },
+  "137272611": {
+    "name": "포켓몬 카드 게임 카드 실드  「잘 자 나오하&마스카나」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272611"
+  },
   "132207315": {
     "name": "포켓몬 카드 게임 카드 실드 「빛나」",
     "soldout": true,
@@ -683,11 +683,6 @@
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「거북왕」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166449"
-  },
-  "137272611": {
-    "name": "포켓몬 카드 게임 카드 실드  「잘 자 나오하&마스카나」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272611"
   },
   "133843260": {
     "name": "포켓몬 카드 게임 카드 실드「메가다크라이」",
