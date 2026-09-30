@@ -174,9 +174,14 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167725"
   },
+  "137272340": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「나오하&마스카나 ex」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272340"
+  },
   "137272307": {
     "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「이브이 ex」",
-    "soldout": false,
+    "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272307"
   },
   "114169383": {
@@ -239,11 +244,6 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114168821"
   },
-  "137272340": {
-    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「나오하&마스카나 ex」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272340"
-  },
   "114167727": {
     "name": "포켓몬 카드 게임 카드 실드 「코라이돈」",
     "soldout": true,
@@ -284,15 +284,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=120951109"
   },
-  "114166363": {
-    "name": "포켓몬 카드 게임 소드&실드 스페셜 카드 세트 「풀의 리피아 VSTAR」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166363"
-  },
   "137272606": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
+  },
+  "114166363": {
+    "name": "포켓몬 카드 게임 소드&실드 스페셜 카드 세트 「풀의 리피아 VSTAR」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166363"
   },
   "114166387": {
     "name": "포켓몬 카드 게임 카드 실드 「찬란한 가디안」",
@@ -494,15 +494,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167719"
   },
-  "137272635": {
-    "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272635"
-  },
   "131702908": {
     "name": "포켓몬 카드 게임 카드 실드 「메가가디안」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=131702908"
+  },
+  "137272635": {
+    "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272635"
   },
   "131702849": {
     "name": "포켓몬 카드 게임 카드 실드 「메가루카리오」",
