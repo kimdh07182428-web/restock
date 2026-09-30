@@ -179,6 +179,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272307"
   },
+  "137272360": {
+    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「조로아&조로아크 ex」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272360"
+  },
   "114169383": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「흑염의 지배자」",
     "soldout": true,
@@ -188,11 +193,6 @@
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「스칼렛 ex」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167757"
-  },
-  "137272360": {
-    "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「조로아&조로아크 ex」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272360"
   },
   "137272340": {
     "name": "포켓몬 카드 게임 MEGA 스타터 세트 ex 「나오하&마스카나 ex」",
@@ -344,15 +344,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=120618617"
   },
-  "114166389": {
-    "name": "포켓몬 카드 게임 카드 실드 「미끄래곤(히스이의 모습)」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166389"
-  },
   "137272606": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
+  },
+  "114166389": {
+    "name": "포켓몬 카드 게임 카드 실드 「미끄래곤(히스이의 모습)」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166389"
   },
   "114166415": {
     "name": "포켓몬 카드 게임 카드 실드 「제라오라 Ver.2」",
