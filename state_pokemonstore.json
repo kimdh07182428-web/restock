@@ -221,7 +221,7 @@
   },
   "137272606": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
-    "soldout": false,
+    "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
   },
   "130905008": {
@@ -419,6 +419,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166333"
   },
+  "137272635": {
+    "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272635"
+  },
   "114165865": {
     "name": "포켓몬 카드 게임 컬렉션 리필",
     "soldout": true,
@@ -433,11 +438,6 @@
     "name": "포켓몬 카드 게임 카드 실드「앤테이&라이코&스이쿤」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167553"
-  },
-  "137272635": {
-    "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272635"
   },
   "123414802": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 스타터 세트 테라스탈타입:스텔라 「파라블레이즈 ex」",
