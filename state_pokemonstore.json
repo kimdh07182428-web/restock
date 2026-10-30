@@ -1024,11 +1024,6 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167037"
   },
-  "132207346": {
-    "name": "포켓몬 카드 게임 카드 실드 「토게데마루&멍파치」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=132207346"
-  },
   "137635025": {
     "name": "포켓몬 카드 게임 플레이매트 「Spooky Flame」",
     "soldout": false,
@@ -1038,6 +1033,11 @@
     "name": "포켓몬 카드 게임 덱 케이스 「Spooky Flame」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137635006"
+  },
+  "132207346": {
+    "name": "포켓몬 카드 게임 카드 실드 「토게데마루&멍파치」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=132207346"
   },
   "114169357": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 「ex 스페셜 세트」",
