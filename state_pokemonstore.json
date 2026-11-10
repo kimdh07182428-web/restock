@@ -214,11 +214,6 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114168965"
   },
-  "115634309": {
-    "name": "포켓몬 카드 게임 Classic",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=115634309"
-  },
   "137272606": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
     "soldout": true,
@@ -238,6 +233,11 @@
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 「컬렉션 파일 세트 N」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=129556703"
+  },
+  "115634309": {
+    "name": "포켓몬 카드 게임 Classic",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=115634309"
   },
   "131910389": {
     "name": "포켓몬 카드 게임 MEGA 스타터 세트 MEGA 「메가디안시 ex」",
