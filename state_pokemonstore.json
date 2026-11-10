@@ -219,11 +219,6 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
   },
-  "115634309": {
-    "name": "포켓몬 카드 게임 Classic",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=115634309"
-  },
   "130905008": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 스페셜 점보 카드 세트 「리자몽 ex」",
     "soldout": true,
@@ -238,6 +233,11 @@
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 「컬렉션 파일 세트 N」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=129556703"
+  },
+  "115634309": {
+    "name": "포켓몬 카드 게임 Classic",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=115634309"
   },
   "131910389": {
     "name": "포켓몬 카드 게임 MEGA 스타터 세트 MEGA 「메가디안시 ex」",
