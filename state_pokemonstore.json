@@ -254,15 +254,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167727"
   },
-  "115456633": {
-    "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「고대의 포효」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=115456633"
-  },
   "137693873": {
     "name": "포켓몬 카드 게임 카드 실드 「고풍에디션」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137693873"
+  },
+  "115456633": {
+    "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「고대의 포효」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=115456633"
   },
   "131912888": {
     "name": "포켓몬 카드 게임 플레이매트 「따라큐와 Night Forest」",
@@ -408,11 +408,6 @@
     "name": "포켓몬 카드 게임 카드 실드 「나오하&뜨아거&꾸왁스」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167723"
-  },
-  "137694686": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 프리져&썬더&파이어」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694686"
   },
   "114169389": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 배틀 강화 BOX 「흑염의 지배자」",
