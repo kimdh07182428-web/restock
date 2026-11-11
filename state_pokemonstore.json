@@ -199,15 +199,15 @@
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694998"
   },
-  "114169383": {
-    "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「흑염의 지배자」",
-    "soldout": true,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114169383"
-  },
   "137694836": {
     "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 비비용」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694836"
+  },
+  "114169383": {
+    "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「흑염의 지배자」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114169383"
   },
   "137694810": {
     "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
@@ -229,6 +229,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=123242730"
   },
+  "137694167": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 삐삐와 픽시」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694167"
+  },
   "115455807": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「미래의 일섬」",
     "soldout": true,
@@ -238,11 +243,6 @@
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 확장팩 「클레이버스트」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114168965"
-  },
-  "137694167": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 삐삐와 픽시」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694167"
   },
   "137694704": {
     "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 괴력몬과 시라소몬」",
