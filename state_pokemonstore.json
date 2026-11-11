@@ -224,15 +224,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114168965"
   },
-  "137694836": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 비비용」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694836"
-  },
   "137694810": {
     "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694810"
+  },
+  "137694836": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 비비용」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694836"
   },
   "137694998": {
     "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 히스이 가디와 화살꼬빈」",
@@ -243,11 +243,6 @@
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 이브이」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
-  },
-  "137694998": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 히스이 가디와 화살꼬빈」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694998"
   },
   "130905008": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 스페셜 점보 카드 세트 「리자몽 ex」",
