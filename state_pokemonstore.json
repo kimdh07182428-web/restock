@@ -444,6 +444,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=133451675"
   },
+  "137693873": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137693873"
+  },
   "114167553": {
     "name": "포켓몬 카드 게임 카드 실드「앤테이&라이코&스이쿤」",
     "soldout": true,
@@ -473,11 +478,6 @@
     "name": "포켓몬 카드 게임 소드&실드 점보 카드 컬렉션 「라프라스」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167561"
-  },
-  "137693873": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137693873"
   },
   "114169391": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 60장 랜덤 ex 스타트 덱",
@@ -634,6 +634,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167549"
   },
+  "137694686": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 프리져&썬더&파이어」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694686"
+  },
   "120814268": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「테라스탈 오거폰 벽록의 가면」",
     "soldout": true,
@@ -724,10 +729,10 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=124347958"
   },
-  "137694686": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 프리져&썬더&파이어」",
+  "137694998": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 히스이 가디와 화살꼬빈」",
     "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694686"
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694998"
   },
   "122818151": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「큐레무」",
@@ -748,6 +753,11 @@
     "name": "포켓몬 카드 게임 소드&실드 확장팩 「소드」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167033"
+  },
+  "137694810": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694810"
   },
   "133226843": {
     "name": "포켓몬 카드 게임 MEGA 스페셜 카드 세트「메가엘레이드 ex」",
@@ -773,11 +783,6 @@
     "name": "포켓몬 카드 게임 소드&실드 스타터 세트 V (5종)",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114165225"
-  },
-  "137694998": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 히스이 가디와 화살꼬빈」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694998"
   },
   "115399805": {
     "name": "포켓몬 카드 게임 덱 케이스 「악 테라스탈 리자몽」",
@@ -823,11 +828,6 @@
     "name": "포켓몬 카드 게임 카드 실드 「한판내기」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=116183705"
-  },
-  "137694810": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694810"
   },
   "114166411": {
     "name": "포켓몬 카드 게임 소드&실드 VSTAR&VMAX 하이클래스 덱 「제라오라」",
@@ -919,25 +919,10 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166391"
   },
-  "137694167": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 삐삐와 픽시」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694167"
-  },
   "114168815": {
     "name": "포켓몬 카드 게임 카드 실드 프리미엄 「테라스탈 윈디」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114168815"
-  },
-  "137694836": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 비비용」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694836"
-  },
-  "137694704": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 괴력몬과 시라소몬」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694704"
   },
   "131038465": {
     "name": "포켓몬센터 포켓몬 카드 게임 프리미엄 레더 플립 덱케이스 피카츄",
