@@ -394,15 +394,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167041"
   },
-  "137694686": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 프리져&썬더&파이어」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694686"
-  },
   "114166589": {
     "name": "포켓몬 카드 게임 카드 실드 「자시안&자마젠타(역전의 용사)」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166589"
+  },
+  "137694686": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 프리져&썬더&파이어」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694686"
   },
   "114167145": {
     "name": "포켓몬센터 포켓몬 카드 게임 카드 실드 「Pokémon and Tools STEPLADDER」",
@@ -464,6 +464,11 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167553"
   },
+  "137694810": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694810"
+  },
   "123414802": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 스타터 세트 테라스탈타입:스텔라 「파라블레이즈 ex」",
     "soldout": true,
@@ -473,11 +478,6 @@
     "name": "포켓몬센터 포켓몬 카드 게임 카드 실드 「HISUI DAYS 주인공」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167071"
-  },
-  "137694810": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694810"
   },
   "131326479": {
     "name": "포켓몬 카드 게임 카드 실드 「투희」",
