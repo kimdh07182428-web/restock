@@ -259,11 +259,6 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137272606"
   },
-  "138208126": {
-    "name": "포켓몬 카드 게임 아크릴 카드 홀더 세트 「님피아」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138208126"
-  },
   "130905008": {
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 스페셜 점보 카드 세트 「리자몽 ex」",
     "soldout": true,
@@ -278,6 +273,11 @@
     "name": "포켓몬 카드 게임 스칼렛&바이올렛 「컬렉션 파일 세트 N」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=129556703"
+  },
+  "138208126": {
+    "name": "포켓몬 카드 게임 아크릴 카드 홀더 세트 「님피아」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138208126"
   },
   "131910389": {
     "name": "포켓몬 카드 게임 MEGA 스타터 세트 MEGA 「메가디안시 ex」",
