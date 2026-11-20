@@ -394,11 +394,6 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=120618617"
   },
-  "138208121": {
-    "name": "포켓몬 카드 게임 아크릴 카드 홀더 세트 「개굴닌자」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138208121"
-  },
   "137272611": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 나오하&마스카나」",
     "soldout": true,
@@ -408,6 +403,11 @@
     "name": "포켓몬 카드 게임 카드 실드 「미끄래곤(히스이의 모습)」",
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114166389"
+  },
+  "138208121": {
+    "name": "포켓몬 카드 게임 아크릴 카드 홀더 세트 「개굴닌자」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138208121"
   },
   "137272635": {
     "name": "포켓몬 카드 게임 카드 실드  「잘 자 조로아&조로아크」",
