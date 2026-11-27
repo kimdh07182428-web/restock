@@ -111,7 +111,7 @@
   },
   "138237510": {
     "name": "포켓몬 카드 게임 MEGA「30th CELEBRATION 카드 세트 이상해씨・파이리・꼬부기」",
-    "soldout": true,
+    "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138237510"
   },
   "138238361": {
@@ -139,15 +139,15 @@
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694998"
   },
-  "137694810": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694810"
-  },
   "138238659": {
     "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 모부기・불꽃숭이・팽도리」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238659"
+  },
+  "137694810": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 샤미드와 콘치」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694810"
   },
   "137694836": {
     "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 비비용」",
@@ -174,15 +174,15 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=130382695"
   },
-  "137694167": {
-    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 삐삐와 픽시」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694167"
-  },
   "138238878": {
     "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 주리비얀・뚜꾸리・수댕이」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238878"
+  },
+  "137694167": {
+    "name": "포켓몬 카드 게임 카드 실드 「고풍에디션 삐삐와 픽시」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=137694167"
   },
   "138238983": {
     "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 나오하・뜨아거・꾸왁스」",
