@@ -109,11 +109,6 @@
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=114167079"
   },
-  "138238878": {
-    "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 주리비얀・뚜꾸리・수댕이」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238878"
-  },
   "138238659": {
     "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 모부기・불꽃숭이・팽도리」",
     "soldout": true,
@@ -129,20 +124,25 @@
     "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138237510"
   },
+  "138238878": {
+    "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 주리비얀・뚜꾸리・수댕이」",
+    "soldout": true,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238878"
+  },
   "138238983": {
     "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 나오하・뜨아거・꾸왁스」",
-    "soldout": false,
+    "soldout": true,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238983"
-  },
-  "138238924": {
-    "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 도치마론・푸호꼬・개구마르」",
-    "soldout": false,
-    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238924"
   },
   "138238431": {
     "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 나무지기・아차모・물짱이」",
     "soldout": false,
     "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238431"
+  },
+  "138238924": {
+    "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 도치마론・푸호꼬・개구마르」",
+    "soldout": false,
+    "url": "https://m.pokemonstore.co.kr/pages/product/product-detail.html?productNo=138238924"
   },
   "138238955": {
     "name": "포켓몬 카드 게임 MEGA 「30th CELEBRATION 카드 세트 흥나숭・염버니・울머기」",
